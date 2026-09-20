@@ -33,7 +33,7 @@ const lightboxClose = document.querySelector('.lightbox-close');
 
 document.querySelector('.gallery').addEventListener('click', (e) => {
     const activeImage = document.querySelector('.slide.active img');
-
+if (e.target.closest('.arrow') || e.target.closest('.counter')) return;
     if (!activeImage) return;
 
     lightboxImage.src = activeImage.src;
