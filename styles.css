@@ -28,4 +28,9 @@
     font-size: 14px;
   }
 
+    .gallery {
+    height: 480px;
+    min-height: 0;
+  }
+
 }
