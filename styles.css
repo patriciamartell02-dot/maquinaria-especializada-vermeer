@@ -17,14 +17,14 @@
 @media (max-width: 850px) {
 
  .gallery .arrow {
-    width: 42px !important;
-    height: 42px !important;
-    font-size: 18px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 15px !important;
   }
 
   .gallery .counter {
-    padding: 14px 18px;
-    font-size: 14px;
+    padding: 9px 12px !important;
+    font-size: 11px !important;
   }
 
     .gallery {
