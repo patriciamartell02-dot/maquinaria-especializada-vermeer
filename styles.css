@@ -7,3 +7,16 @@
 /* V3: transparent logo + working mobile navigation */
 .brand img{object-fit:contain!important;height:58px!important;width:190px!important;object-position:left center!important}.nav.scrolled .brand img{height:50px!important;width:170px!important}footer img{object-fit:contain!important;height:54px!important;width:180px!important;object-position:left center!important}.mobile-menu{display:none}
 @media(max-width:850px){.brand img{height:42px!important;width:138px!important}.nav.scrolled .brand img{height:40px!important;width:132px!important}.mobile-menu{position:absolute;top:68px;left:0;right:0;background:#10110ff7;padding:24px 20px 28px;display:flex;flex-direction:column;gap:20px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s;border-top:1px solid #ffffff20}.mobile-menu.open{transform:none;opacity:1;pointer-events:auto}.mobile-menu a{font:700 15px 'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;color:#fff}.mobile-menu .btn{color:#111;margin-top:4px}footer img{height:46px!important;width:150px!important}}
+@media (max-width:850px){
+  .hero{
+    padding-bottom:40px;
+  }
+
+  .hero .actions{
+    margin-bottom:28px;
+  }
+
+  .ticker{
+    position:relative;
+  }
+}
