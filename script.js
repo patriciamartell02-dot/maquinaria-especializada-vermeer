@@ -32,12 +32,14 @@ const lightboxImage = document.querySelector('#lightboxImage');
 const lightboxClose = document.querySelector('.lightbox-close');
 
 document.querySelector('.gallery').addEventListener('click', (e) => {
-  if (e.target.tagName !== 'IMG') return;
+    const activeImage = document.querySelector('.slide.active img');
 
-  lightboxImage.src = e.target.src;
-  lightbox.classList.add('open');
-  lightbox.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+    if (!activeImage) return;
+
+    lightboxImage.src = activeImage.src;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
 });
 
 function closeLightbox() {
