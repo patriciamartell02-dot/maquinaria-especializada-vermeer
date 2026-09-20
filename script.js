@@ -26,3 +26,29 @@ const menuBtn=document.querySelector('.menu'), mobileMenu=document.querySelector
 menuBtn?.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));mobileMenu.setAttribute('aria-hidden',String(!open));});
 mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');mobileMenu.setAttribute('aria-hidden','true');}));
 $('#leadForm').addEventListener('submit',()=>{$('#formNote').textContent='Enviando solicitud…';});
+// Visor de imágenes
+const lightbox = document.querySelector('#imageLightbox');
+const lightboxImage = document.querySelector('#lightboxImage');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+document.querySelector('.gallery').addEventListener('click', (e) => {
+  if (e.target.tagName !== 'IMG') return;
+
+  lightboxImage.src = e.target.src;
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImage.src = '';
+  document.body.style.overflow = '';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
