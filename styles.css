@@ -16,11 +16,10 @@
 /* Galería - controles móviles */
 @media (max-width: 850px) {
 
-  .gallery .prev,
-  .gallery .next {
-    width: 52px;
-    height: 52px;
-    font-size: 22px;
+ .gallery .arrow {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 18px !important;
   }
 
   .gallery .counter {
