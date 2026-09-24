@@ -70,6 +70,34 @@
   line-height: 1;
   cursor: pointer;
 }
+/* Ticker de categorías - móvil */
+@media (max-width: 850px) {
+  .ticker {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    min-height: 64px;
+    padding: 0;
+    gap: 0;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ticker::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ticker span {
+    flex: 0 0 auto;
+    min-height: 64px;
+    padding: 0 26px;
+    white-space: nowrap;
+    border-right: 1px solid rgba(17,17,17,.15);
+    border-bottom: 0;
+    font-size: 16px;
+  }
+}
 
 .gallery .slide img {
   cursor: zoom-in;
